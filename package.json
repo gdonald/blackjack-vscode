@@ -1,8 +1,9 @@
 {
+  "publisher": "Greg Donald",
   "name": "blackjack",
   "displayName": "Blackjack",
   "description": "Play Blackjack in VSCode",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "icon": "icon.png",
   "engines": {
     "vscode": "^1.107.0"

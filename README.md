@@ -36,6 +36,8 @@ npm install
 #### Packaging
 
 - **`npm run package`** - Create production build (runs checks and optimizes)
+- **`npx vsce package --no-yarn --baseContentUrl https://github.com/placeholder --baseImagesUrl https://github.com/placeholder --allow-missing-repository`** - Package extension as .vsix file
+- **`code --install-extension blackjack-0.0.1.vsix`** - Install the packaged extension
 
 ### Running the Extension
 
