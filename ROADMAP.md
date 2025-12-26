@@ -39,23 +39,23 @@ DO NOT modify or directly reference any code files from inside blackjack-js in t
 
 ## 3. Build System Setup
 
-- [ ] 3.1 Configure React build for webview
-  - [ ] 3.1.1 Create separate `tsconfig.webview.json` for React code
-  - [ ] 3.1.2 Install necessary dependencies (React, ReactDOM, types)
-  - [ ] 3.1.3 Configure build output directory
-- [ ] 3.2 Set up bundler for webview
-  - [ ] 3.2.1 Install esbuild or webpack
-  - [ ] 3.2.2 Create build script for React app
-  - [ ] 3.2.3 Configure separate entry point for webview
-  - [ ] 3.2.4 Set up source maps for debugging
-- [ ] 3.3 Update VSCode extension build
-  - [ ] 3.3.1 Modify extension's `tsconfig.json` if needed
-  - [ ] 3.3.2 Update build scripts in `package.json`
-  - [ ] 3.3.3 Configure output paths for both extension and webview
-- [ ] 3.4 Test build process
-  - [ ] 3.4.1 Run build command
-  - [ ] 3.4.2 Verify both extension and webview bundles are created
-  - [ ] 3.4.3 Check output file sizes and structure
+- [x] 3.1 Configure React build for webview
+  - [x] 3.1.1 Create separate `tsconfig.webview.json` for React code
+  - [x] 3.1.2 Install necessary dependencies (React, ReactDOM, types)
+  - [x] 3.1.3 Configure build output directory
+- [x] 3.2 Set up bundler for webview
+  - [x] 3.2.1 Install esbuild or webpack
+  - [x] 3.2.2 Create build script for React app
+  - [x] 3.2.3 Configure separate entry point for webview
+  - [x] 3.2.4 Set up source maps for debugging
+- [x] 3.3 Update VSCode extension build
+  - [x] 3.3.1 Modify extension's `tsconfig.json` if needed
+  - [x] 3.3.2 Update build scripts in `package.json`
+  - [x] 3.3.3 Configure output paths for both extension and webview
+- [x] 3.4 Test build process
+  - [x] 3.4.1 Run build command
+  - [x] 3.4.2 Verify both extension and webview bundles are created
+  - [x] 3.4.3 Check output file sizes and structure
 
 ## 4. Copy Blackjack Game Code
 
