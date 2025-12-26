@@ -19,23 +19,23 @@ DO NOT modify or directly reference any code files from inside blackjack-js in t
 
 ## 2. Webview Infrastructure
 
-- [ ] 2.1 Create webview provider class
-  - [ ] 2.1.1 Add `BlackjackPanel.ts` file
-  - [ ] 2.1.2 Implement singleton pattern for panel management
-  - [ ] 2.1.3 Add `createOrShow()` method
-  - [ ] 2.1.4 Add `dispose()` cleanup method
-- [ ] 2.2 Implement webview HTML generation
-  - [ ] 2.2.1 Create method to generate webview HTML structure
-  - [ ] 2.2.2 Add CSP (Content Security Policy) meta tags
-  - [ ] 2.2.3 Set up script and style loading
-- [ ] 2.3 Register activation command
-  - [ ] 2.3.1 Update `package.json` to add "Play Blackjack" command
-  - [ ] 2.3.2 Set activation event in `package.json`
-  - [ ] 2.3.3 Wire command to webview creation in `extension.ts`
-- [ ] 2.4 Test webview creation
-  - [ ] 2.4.1 Open command palette
-  - [ ] 2.4.2 Run "Play Blackjack" command
-  - [ ] 2.4.3 Verify empty webview panel opens
+- [x] 2.1 Create webview provider class
+  - [x] 2.1.1 Add `BlackjackPanel.ts` file
+  - [x] 2.1.2 Implement singleton pattern for panel management
+  - [x] 2.1.3 Add `createOrShow()` method
+  - [x] 2.1.4 Add `dispose()` cleanup method
+- [x] 2.2 Implement webview HTML generation
+  - [x] 2.2.1 Create method to generate webview HTML structure
+  - [x] 2.2.2 Add CSP (Content Security Policy) meta tags
+  - [x] 2.2.3 Set up script and style loading
+- [x] 2.3 Register activation command
+  - [x] 2.3.1 Update `package.json` to add "Play Blackjack" command
+  - [x] 2.3.2 Set activation event in `package.json`
+  - [x] 2.3.3 Wire command to webview creation in `extension.ts`
+- [x] 2.4 Test webview creation
+  - [x] 2.4.1 Open command palette
+  - [x] 2.4.2 Run "Play Blackjack" command
+  - [x] 2.4.3 Verify empty webview panel opens
 
 ## 3. Build System Setup
 

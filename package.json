@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "blackjack.helloWorld",
-        "title": "Hello World"
+        "command": "blackjack.playGame",
+        "title": "Play Blackjack"
       }
     ]
   },
