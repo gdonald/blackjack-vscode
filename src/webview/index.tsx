@@ -4,6 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import Game from './components/Game';
 
+document.addEventListener('contextmenu', (e) => {
+	e.preventDefault();
+});
+
 const container = document.getElementById('root');
 if (container) {
 	const root = createRoot(container);

@@ -3,6 +3,7 @@
   "displayName": "Blackjack",
   "description": "Play Blackjack in VSCode",
   "version": "0.0.1",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.107.0"
   },
@@ -15,7 +16,22 @@
     "commands": [
       {
         "command": "blackjack.playGame",
-        "title": "Play Blackjack"
+        "title": "Blackjack: Play",
+        "icon": "$(symbol-misc)"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "blackjack.playGame"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "blackjack.playGame",
+        "key": "ctrl+shift+b",
+        "mac": "cmd+shift+b"
       }
     ]
   },

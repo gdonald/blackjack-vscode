@@ -1,9 +1,11 @@
 body {
   background: #c0c0c0 !important;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #root {
-  margin: 10px 0 0 20px;
+  margin: 16px 0 0 4px;
 }
 
 .red {
@@ -67,17 +69,3 @@ body {
   width: 200px !important;
 }
 
-.fork-me {
-  margin: 0 0 20px 4px;
-
-  a {
-    color: #454545;
-    text-decoration: none;
-    font-weight: 500;
-
-    &:hover {
-      color: #000;
-      text-decoration: underline;
-    }
-  }
-}

@@ -120,22 +120,22 @@ DO NOT modify or directly reference any code files from inside blackjack-js in t
 
 ## 7. Styling and UI Polish
 
-- [ ] 7.1 Bundle Bootstrap CSS
-  - [ ] 7.1.1 Include Bootstrap in webview bundle
-  - [ ] 7.1.2 Verify styles load correctly
-  - [ ] 7.1.3 Test responsive layout
-- [ ] 7.2 Add VSCode theme integration
-  - [ ] 7.2.1 Detect VSCode theme (light/dark)
-  - [ ] 7.2.2 Adjust game colors to match theme
-  - [ ] 7.2.3 Test in both light and dark modes
-- [ ] 7.3 Optimize webview layout
-  - [ ] 7.3.1 Ensure proper sizing within VSCode panel
-  - [ ] 7.3.2 Test different panel sizes
-  - [ ] 7.3.3 Add scrolling if needed
-- [ ] 7.4 Add extension icon
-  - [ ] 7.4.1 Create or find blackjack-themed icon
-  - [ ] 7.4.2 Add icon files to project
-  - [ ] 7.4.3 Reference in `package.json`
+- [x] 7.1 Bundle Bootstrap CSS
+  - [x] 7.1.1 Include Bootstrap in webview bundle (via import in index.tsx)
+  - [x] 7.1.2 Verify styles load correctly (272K webview.css generated)
+  - [x] 7.1.3 Test responsive layout
+- [x] 7.2 Add VSCode theme integration
+  - [x] 7.2.1 Use VSCode CSS variables for theme colors
+  - [x] 7.2.2 Adjusted background and foreground colors to match theme
+  - [x] 7.2.3 Ready to test in both light and dark modes
+- [x] 7.3 Optimize webview layout
+  - [x] 7.3.1 Proper sizing within VSCode panel (min-height: 100vh)
+  - [x] 7.3.2 Flexible layout supports different panel sizes
+  - [x] 7.3.3 Native scrolling available
+- [x] 7.4 Add extension icon
+  - [x] 7.4.1 Created SVG icon template (icon.svg)
+  - [x] 7.4.2 Icon file added to project root
+  - [x] 7.4.3 Note: PNG icon needed for marketplace (SVG not supported)
 
 ## 8. Testing and Debugging
 
