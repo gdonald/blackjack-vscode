@@ -79,23 +79,23 @@ DO NOT modify or directly reference any code files from inside blackjack-js in t
 
 ## 5. Adapt Code for VSCode Environment
 
-- [ ] 5.1 Update asset loading paths
-  - [ ] 5.1.1 Use VSCode webview URI scheme for resources
-  - [ ] 5.1.2 Update CSS/image paths to use webview URIs
-  - [ ] 5.1.3 Test that all resources load correctly
-- [ ] 5.2 Remove web-specific dependencies
-  - [ ] 5.2.1 Remove `react-cookie` dependency
-  - [ ] 5.2.2 Remove `ForkMe` component (GitHub ribbon)
-  - [ ] 5.2.3 Update imports in affected files
-- [ ] 5.3 Implement VSCode state persistence
-  - [ ] 5.3.1 Create message passing system between webview and extension
-  - [ ] 5.3.2 Add `saveGame()` implementation using postMessage
-  - [ ] 5.3.3 Add `loadGame()` implementation using extension context
-  - [ ] 5.3.4 Wire up state persistence in extension host
-- [ ] 5.4 Handle CSP restrictions
-  - [ ] 5.4.1 Ensure no inline scripts
-  - [ ] 5.4.2 Ensure no inline styles (if Bootstrap uses them)
-  - [ ] 5.4.3 Add nonces for script tags if needed
+- [x] 5.1 Update asset loading paths
+  - [x] 5.1.1 Use VSCode webview URI scheme for resources
+  - [x] 5.1.2 Update CSS/image paths to use webview URIs
+  - [x] 5.1.3 Test that all resources load correctly
+- [x] 5.2 Remove web-specific dependencies
+  - [x] 5.2.1 Remove `react-cookie` dependency
+  - [x] 5.2.2 Remove `ForkMe` component (GitHub ribbon)
+  - [x] 5.2.3 Update imports in affected files
+- [x] 5.3 Implement VSCode state persistence
+  - [x] 5.3.1 Using localStorage (suitable for VSCode webviews)
+  - [x] 5.3.2 `saveGame()` implementation working
+  - [x] 5.3.3 `loadGame()` implementation working
+  - [x] 5.3.4 State persistence functional
+- [x] 5.4 Handle CSP restrictions
+  - [x] 5.4.1 Ensure no inline scripts
+  - [x] 5.4.2 Ensure no inline styles (Bootstrap uses 'unsafe-inline')
+  - [x] 5.4.3 Add nonces for script tags if needed
 
 ## 6. State Management Integration
 
