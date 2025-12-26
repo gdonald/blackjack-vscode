@@ -2,6 +2,7 @@
 
 ## Annoyances
 - Do not ever respond with "Perfect!", "Excellent!", or "Great!" or anything like that.  Just stick to the facts.  There's no need to act overly excited.
+- Do not add emojis to any files.
 
 ## "What next" questions
 - English is read left to right and top to bottom. Do not ask which thing to do next.  The ROADMAP is obviously arranged in the precise order in which the items need to be completed.

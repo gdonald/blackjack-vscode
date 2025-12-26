@@ -1,3 +1,7 @@
 blackjack-js
 !CLAUDE.md
 !ROADMAP.md
+node_modules
+out
+dist
+*.vsix

@@ -3,20 +3,22 @@
 DO NOT modify or directly reference any code files from inside blackjack-js in the new implementation.  Code from blackjack-js can be used but must be copied out of there, so at the end blackjack-js can be deleted.  
 
 ## 1. Project Setup & Scaffolding
-- [ ] 1.1 Generate VSCode extension scaffold using `yo code`
-  - [ ] 1.1.1 Choose TypeScript as language
-  - [ ] 1.1.2 Name extension "blackjack-vscode"
-  - [ ] 1.1.3 Set up initial configuration
-- [ ] 1.2 Review generated extension structure
-  - [ ] 1.2.1 Understand `extension.ts` entry point
-  - [ ] 1.2.2 Review `package.json` manifest
-  - [ ] 1.2.3 Check `tsconfig.json` configuration
-- [ ] 1.3 Test basic extension functionality
-  - [ ] 1.3.1 Press F5 to launch Extension Development Host
-  - [ ] 1.3.2 Run default "Hello World" command
-  - [ ] 1.3.3 Verify extension activates correctly
+
+- [x] 1.1 Generate VSCode extension scaffold using `yo code`
+  - [x] 1.1.1 Choose TypeScript as language
+  - [x] 1.1.2 Name extension "blackjack-vscode"
+  - [x] 1.1.3 Set up initial configuration
+- [x] 1.2 Review generated extension structure
+  - [x] 1.2.1 Understand `extension.ts` entry point
+  - [x] 1.2.2 Review `package.json` manifest
+  - [x] 1.2.3 Check `tsconfig.json` configuration
+- [x] 1.3 Test basic extension functionality
+  - [x] 1.3.1 Press F5 to launch Extension Development Host
+  - [x] 1.3.2 Run default "Hello World" command
+  - [x] 1.3.3 Verify extension activates correctly
 
 ## 2. Webview Infrastructure
+
 - [ ] 2.1 Create webview provider class
   - [ ] 2.1.1 Add `BlackjackPanel.ts` file
   - [ ] 2.1.2 Implement singleton pattern for panel management
@@ -36,6 +38,7 @@ DO NOT modify or directly reference any code files from inside blackjack-js in t
   - [ ] 2.4.3 Verify empty webview panel opens
 
 ## 3. Build System Setup
+
 - [ ] 3.1 Configure React build for webview
   - [ ] 3.1.1 Create separate `tsconfig.webview.json` for React code
   - [ ] 3.1.2 Install necessary dependencies (React, ReactDOM, types)
@@ -55,6 +58,7 @@ DO NOT modify or directly reference any code files from inside blackjack-js in t
   - [ ] 3.4.3 Check output file sizes and structure
 
 ## 4. Copy Blackjack Game Code
+
 - [ ] 4.1 Copy game logic classes
   - [ ] 4.1.1 Copy `lib/Hand.ts` to extension
   - [ ] 4.1.2 Copy `lib/Shoe.ts` to extension
@@ -74,6 +78,7 @@ DO NOT modify or directly reference any code files from inside blackjack-js in t
   - [ ] 4.4.3 Import and render Game component
 
 ## 5. Adapt Code for VSCode Environment
+
 - [ ] 5.1 Update asset loading paths
   - [ ] 5.1.1 Use VSCode webview URI scheme for resources
   - [ ] 5.1.2 Update CSS/image paths to use webview URIs
@@ -93,6 +98,7 @@ DO NOT modify or directly reference any code files from inside blackjack-js in t
   - [ ] 5.4.3 Add nonces for script tags if needed
 
 ## 6. State Management Integration
+
 - [ ] 6.1 Create message protocol
   - [ ] 6.1.1 Define message types (SAVE_STATE, LOAD_STATE)
   - [ ] 6.1.2 Create TypeScript interfaces for messages
@@ -113,6 +119,7 @@ DO NOT modify or directly reference any code files from inside blackjack-js in t
   - [ ] 6.4.3 Reopen and verify state restored
 
 ## 7. Styling and UI Polish
+
 - [ ] 7.1 Bundle Bootstrap CSS
   - [ ] 7.1.1 Include Bootstrap in webview bundle
   - [ ] 7.1.2 Verify styles load correctly
@@ -131,6 +138,7 @@ DO NOT modify or directly reference any code files from inside blackjack-js in t
   - [ ] 7.4.3 Reference in `package.json`
 
 ## 8. Testing and Debugging
+
 - [ ] 8.1 Test all game features
   - [ ] 8.1.1 Test dealing cards
   - [ ] 8.1.2 Test hit, stand, double down, split
@@ -152,6 +160,7 @@ DO NOT modify or directly reference any code files from inside blackjack-js in t
   - [ ] 8.4.3 Check for performance issues
 
 ## 9. Documentation and Polish
+
 - [ ] 9.1 Update README.md
   - [ ] 9.1.1 Add description of VSCode extension
   - [ ] 9.1.2 Add installation instructions
@@ -172,6 +181,7 @@ DO NOT modify or directly reference any code files from inside blackjack-js in t
   - [ ] 9.4.3 Add settings for number of decks
 
 ## 10. Package and Publish
+
 - [ ] 10.1 Prepare for packaging
   - [ ] 10.1.1 Clean up unused files
   - [ ] 10.1.2 Optimize bundle sizes
@@ -191,6 +201,7 @@ DO NOT modify or directly reference any code files from inside blackjack-js in t
   - [ ] 10.4.4 Verify listing on marketplace
 
 ## 11. Future Enhancements (Optional)
+
 - [ ] 11.1 Add statistics tracking
   - [ ] 11.1.1 Track win/loss ratio
   - [ ] 11.1.2 Track total hands played
