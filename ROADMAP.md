@@ -59,23 +59,23 @@ DO NOT modify or directly reference any code files from inside blackjack-js in t
 
 ## 4. Copy Blackjack Game Code
 
-- [ ] 4.1 Copy game logic classes
-  - [ ] 4.1.1 Copy `lib/Hand.ts` to extension
-  - [ ] 4.1.2 Copy `lib/Shoe.ts` to extension
-  - [ ] 4.1.3 Create `src/webview/lib/` directory structure
-- [ ] 4.2 Copy React components
-  - [ ] 4.2.1 Copy all component files from `blackjack-js/src/components/`
-  - [ ] 4.2.2 Maintain directory structure (menus subfolder)
-  - [ ] 4.2.3 Copy `Card.tsx`, `Game.tsx`, `DealerHand.tsx`, `PlayerHand.tsx`
-  - [ ] 4.2.4 Copy all menu components
-- [ ] 4.3 Copy assets and styles
-  - [ ] 4.3.1 Copy `index.css` if exists
-  - [ ] 4.3.2 Copy any card images or assets
-  - [ ] 4.3.3 Copy Bootstrap dependency reference
-- [ ] 4.4 Create webview entry point
-  - [ ] 4.4.1 Create `src/webview/index.tsx`
-  - [ ] 4.4.2 Set up React root rendering
-  - [ ] 4.4.3 Import and render Game component
+- [x] 4.1 Copy game logic classes
+  - [x] 4.1.1 Copy `lib/Hand.ts` to extension
+  - [x] 4.1.2 Copy `lib/Shoe.ts` to extension
+  - [x] 4.1.3 Create `src/webview/lib/` directory structure
+- [x] 4.2 Copy React components
+  - [x] 4.2.1 Copy all component files from `blackjack-js/src/components/`
+  - [x] 4.2.2 Maintain directory structure (menus subfolder)
+  - [x] 4.2.3 Copy `Card.tsx`, `Game.tsx`, `DealerHand.tsx`, `PlayerHand.tsx`
+  - [x] 4.2.4 Copy all menu components
+- [x] 4.3 Copy assets and styles
+  - [x] 4.3.1 Copy `index.css` if exists
+  - [x] 4.3.2 Copy any card images or assets
+  - [x] 4.3.3 Copy Bootstrap dependency reference
+- [x] 4.4 Create webview entry point
+  - [x] 4.4.1 Create `src/webview/index.tsx`
+  - [x] 4.4.2 Set up React root rendering
+  - [x] 4.4.3 Import and render Game component
 
 ## 5. Adapt Code for VSCode Environment
 
