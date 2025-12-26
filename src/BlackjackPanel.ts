@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import { WebviewMessage, GameState } from './shared/messages';
 
 export class BlackjackPanel {
 	public static currentPanel: BlackjackPanel | undefined;
@@ -6,9 +7,10 @@ export class BlackjackPanel {
 
 	private readonly _panel: vscode.WebviewPanel;
 	private readonly _extensionUri: vscode.Uri;
+	private readonly _context: vscode.ExtensionContext;
 	private _disposables: vscode.Disposable[] = [];
 
-	public static createOrShow(extensionUri: vscode.Uri) {
+	public static createOrShow(extensionUri: vscode.Uri, context: vscode.ExtensionContext) {
 		const column = vscode.window.activeTextEditor
 			? vscode.window.activeTextEditor.viewColumn
 			: undefined;
@@ -28,16 +30,50 @@ export class BlackjackPanel {
 			}
 		);
 
-		BlackjackPanel.currentPanel = new BlackjackPanel(panel, extensionUri);
+		BlackjackPanel.currentPanel = new BlackjackPanel(panel, extensionUri, context);
 	}
 
-	private constructor(panel: vscode.WebviewPanel, extensionUri: vscode.Uri) {
+	private constructor(panel: vscode.WebviewPanel, extensionUri: vscode.Uri, context: vscode.ExtensionContext) {
 		this._panel = panel;
 		this._extensionUri = extensionUri;
+		this._context = context;
 
 		this._panel.onDidDispose(() => this.dispose(), null, this._disposables);
 
 		this._panel.webview.html = this._getHtmlForWebview();
+
+		this._panel.webview.onDidReceiveMessage(
+			(message: WebviewMessage) => {
+				this._handleMessage(message);
+			},
+			null,
+			this._disposables
+		);
+
+		this._sendInitialState();
+	}
+
+	private _handleMessage(message: WebviewMessage) {
+		switch (message.type) {
+			case 'SAVE_STATE':
+				this._context.globalState.update('blackjackGameState', message.state);
+				break;
+			case 'LOAD_STATE':
+				const state = this._context.globalState.get<GameState>('blackjackGameState');
+				this._panel.webview.postMessage({
+					type: 'STATE_RESPONSE',
+					state: state || null
+				});
+				break;
+		}
+	}
+
+	private _sendInitialState() {
+		const state = this._context.globalState.get<GameState>('blackjackGameState');
+		this._panel.webview.postMessage({
+			type: 'STATE_RESPONSE',
+			state: state || null
+		});
 	}
 
 	public dispose() {

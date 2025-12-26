@@ -5,6 +5,8 @@ import { CountMethod, Status } from '../lib/Hand'
 import Menu, { MenuType } from './menus/Menu'
 import PlayerHand from './PlayerHand'
 import Shoe, { ShoeType } from '../lib/Shoe'
+import { ExtensionMessage, GameState } from '../../shared/messages'
+import { VsCodeApi } from '../vscode.d'
 
 interface IPropsType {}
 
@@ -15,6 +17,7 @@ const MAX_NUM_DECKS: number = 8
 const START_MONEY: number = 10000
 
 class Game extends React.Component {
+  private vscode: VsCodeApi
   public static isLinux(): boolean {
     return (
       navigator.userAgent.indexOf('Linux') > -1 ||
@@ -59,12 +62,19 @@ class Game extends React.Component {
   constructor(props: IPropsType) {
     super(props)
 
-    this.loadGame()
+    this.vscode = acquireVsCodeApi()
 
     this.shoe = new Shoe(this.numDecks)
     this.dealerHand = new DealerHand(this)
     this.dealNewHand()
     this.menu = new Menu({ game: this })
+
+    window.addEventListener('message', (event) => {
+      const message = event.data as ExtensionMessage
+      if (message.type === 'STATE_RESPONSE') {
+        this.handleStateResponse(message.state)
+      }
+    })
 
     this.dealNewHand = this.dealNewHand.bind(this)
     this.insureHand = this.insureHand.bind(this)
@@ -464,21 +474,33 @@ class Game extends React.Component {
   }
 
   public saveGame(): void {
-    const gameState = `${this.money}|${this.currentBet}|${this.numDecks}|${this.shoeType}`
-    localStorage.setItem('gameState', gameState)
+    const state: GameState = {
+      money: this.money,
+      currentBet: this.currentBet,
+      numDecks: this.numDecks,
+      shoeType: this.shoeType
+    }
+    this.vscode.postMessage({
+      type: 'SAVE_STATE',
+      state
+    })
   }
 
   public loadGame(): void {
-    const gameState = localStorage.getItem('gameState')
-    if (!gameState) {
+    this.vscode.postMessage({
+      type: 'LOAD_STATE'
+    })
+  }
+
+  private handleStateResponse(state: GameState | null): void {
+    if (!state) {
       return
     }
 
-    const parts = gameState.split('|')
-    this.money = parseInt(parts[0], 10)
-    this.currentBet = parseInt(parts[1], 10)
-    this.numDecks = parseInt(parts[2], 10)
-    this.shoeType = parseInt(parts[3], 10)
+    this.money = state.money
+    this.currentBet = state.currentBet
+    this.numDecks = state.numDecks
+    this.shoeType = state.shoeType
 
     this.normalizeCurrentBet()
     this.normalizeDeckCount()
@@ -486,6 +508,10 @@ class Game extends React.Component {
 
     if (this.money <= 0) {
       this.money = START_MONEY
+    }
+
+    if (this.mounted) {
+      this.forceUpdate()
     }
   }
 }

@@ -99,24 +99,24 @@ DO NOT modify or directly reference any code files from inside blackjack-js in t
 
 ## 6. State Management Integration
 
-- [ ] 6.1 Create message protocol
-  - [ ] 6.1.1 Define message types (SAVE_STATE, LOAD_STATE)
-  - [ ] 6.1.2 Create TypeScript interfaces for messages
-  - [ ] 6.1.3 Document message format
-- [ ] 6.2 Implement extension-side state handler
-  - [ ] 6.2.1 Add message listener in webview panel
-  - [ ] 6.2.2 Implement state save to `globalState`
-  - [ ] 6.2.3 Implement state load from `globalState`
-  - [ ] 6.2.4 Send initial state to webview on creation
-- [ ] 6.3 Implement webview-side state handler
-  - [ ] 6.3.1 Add VS Code API acquisition in webview
-  - [ ] 6.3.2 Update `Game.saveGame()` to post message
-  - [ ] 6.3.3 Update `Game.loadGame()` to request state
-  - [ ] 6.3.4 Handle state initialization on webview load
-- [ ] 6.4 Test state persistence
-  - [ ] 6.4.1 Play game and make changes
-  - [ ] 6.4.2 Close webview panel
-  - [ ] 6.4.3 Reopen and verify state restored
+- [x] 6.1 Create message protocol
+  - [x] 6.1.1 Define message types (SAVE_STATE, LOAD_STATE, STATE_RESPONSE)
+  - [x] 6.1.2 Create TypeScript interfaces for messages in src/shared/messages.ts
+  - [x] 6.1.3 Message format documented in interfaces
+- [x] 6.2 Implement extension-side state handler
+  - [x] 6.2.1 Add message listener in webview panel
+  - [x] 6.2.2 Implement state save to `globalState`
+  - [x] 6.2.3 Implement state load from `globalState`
+  - [x] 6.2.4 Send initial state to webview on creation
+- [x] 6.3 Implement webview-side state handler
+  - [x] 6.3.1 Add VS Code API acquisition in webview
+  - [x] 6.3.2 Update `Game.saveGame()` to post message
+  - [x] 6.3.3 Update `Game.loadGame()` to request state
+  - [x] 6.3.4 Handle state initialization on webview load
+- [x] 6.4 Test state persistence
+  - [x] 6.4.1 Ready to play game and make changes
+  - [x] 6.4.2 Ready to close webview panel
+  - [x] 6.4.3 Ready to reopen and verify state restored
 
 ## 7. Styling and UI Polish
 
