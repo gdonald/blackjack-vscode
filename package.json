@@ -1,5 +1,5 @@
 {
-  "publisher": "Greg Donald",
+  "publisher": "greg-donald",
   "name": "blackjack",
   "displayName": "Blackjack",
   "description": "Play Blackjack in VSCode",
@@ -8,6 +8,17 @@
   "engines": {
     "vscode": "^1.107.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gdonald/blackjack-vscode.git"
+  },
+  "files": [
+    "dist/**/*",
+    "icon.png",
+    "README.md",
+    "LICENSE.md",
+    "CHANGELOG.md"
+  ],
   "categories": [
     "Other"
   ],
