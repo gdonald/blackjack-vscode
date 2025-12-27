@@ -1,8 +1,8 @@
-# Blackjack for VS Code
+## Blackjack for VS Code
 
 Play Blackjack directly in VS Code.
 
-## Usage
+### Usage
 
 Open the Command Palette (`Cmd+Shift+P` on macOS or `Ctrl+Shift+P` on Windows/Linux) and run:
 
@@ -22,3 +22,6 @@ If you run out of money, close the tab and restart it.
 
 You can complain about issues or request new features here: [https://github.com/gdonald/blackjack-vscode/issues](https://github.com/gdonald/blackjack-vscode/issues)
 
+### Other Blackjack Implementations:
+
+I've written Blackjack in [some other programming languages](https://github.com/gdonald?tab=repositories&q=blackjack&type=public&language=&sort=stargazers) too.  Check them out!
