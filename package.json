@@ -3,10 +3,10 @@
   "name": "blackjack",
   "displayName": "Blackjack",
   "description": "Play Blackjack in VSCode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "icon": "icon.png",
   "engines": {
-    "vscode": "^1.107.0"
+    "vscode": "^1.104.0"
   },
   "repository": {
     "type": "git",
@@ -66,7 +66,7 @@
     "@types/node": "22.x",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "@types/vscode": "^1.107.0",
+    "@types/vscode": "^1.104.0",
     "@vscode/test-cli": "^0.0.12",
     "@vscode/test-electron": "^2.5.2",
     "esbuild": "^0.27.1",
